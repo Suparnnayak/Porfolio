@@ -22,8 +22,24 @@ const jetbrainsMono = JetBrains_Mono({
     weight: ["400", "500", "600", "700", "800"],
 });
 
+function getMetadataBase() {
+    const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+
+    if (!rawSiteUrl) {
+        return new URL("http://localhost:3000");
+    }
+
+    const normalizedSiteUrl = /^https?:\/\//i.test(rawSiteUrl) ? rawSiteUrl : `https://${rawSiteUrl}`;
+
+    try {
+        return new URL(normalizedSiteUrl);
+    } catch {
+        return new URL("http://localhost:3000");
+    }
+}
+
 export const metadata: Metadata = {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+    metadataBase: getMetadataBase(),
     title: "Suparn Nayak — Portfolio",
     description:
         "Portfolio of Suparn Nayak, a Computer Science student building AI, full-stack, and DSA-driven software projects.",
