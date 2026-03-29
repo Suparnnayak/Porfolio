@@ -433,9 +433,9 @@ export default function Home() {
 
                     <BentoGridItem
                         index={3}
-                        className="min-h-[16rem] md:col-span-1"
+                        className="min-h-[17rem] md:col-span-1"
                         title="SkyRescue Vision"
-                        description="UAV detection and SORT-based human tracking"
+                        description="UAV detection and human tracking"
                         bgColor="bg-vivid"
                         textColor="text-cream"
                         icon={<Radar size={28} className="text-acid" />}
@@ -462,24 +462,30 @@ export default function Home() {
 
                     <BentoGridItem
                         index={4}
-                        className="min-h-[16rem] md:col-span-1"
+                        className="min-h-[17rem] md:col-span-1"
                         title="The Stack"
-                        description="Languages, tools, AI, and deployment workflow"
+                        description="Languages, tools, and deployment flow"
                         bgColor="bg-ink"
                         textColor="text-cream"
                         icon={<Terminal size={28} className="text-cream" />}
                         href="/stack"
                         header={
-                            <>
+                            <div className="h-full w-full p-3 md:p-4 text-cream pointer-events-none">
+                                <div className="flex justify-between items-start">
+                                    <div className="font-mono text-[0.55rem] md:text-[0.6rem] font-bold text-cream/55 tracking-[0.18em] md:tracking-widest uppercase">
+                                        TOOLS://STACK
+                                    </div>
+                                    <Code2 size={24} className="text-cream/55 md:w-7 md:h-7" />
+                                </div>
                                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                                     <span className="font-heading font-bold text-[3.3rem] md:text-[5rem] tracking-tighter text-cream/10 leading-none select-none">
                                         DEV
                                     </span>
                                 </div>
-                                <div className="absolute top-3 right-3 animate-spin-slow">
-                                    <Code2 size={34} className="opacity-10 md:w-10 md:h-10 text-cream" />
+                                <div className="absolute right-4 bottom-20 hidden md:block font-mono text-[0.55rem] font-bold uppercase tracking-[0.25em] text-cream/45">
+                                    Workflow Ready
                                 </div>
-                            </>
+                            </div>
                         }
                     />
                 </BentoGrid>
