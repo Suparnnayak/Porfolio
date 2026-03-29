@@ -46,7 +46,7 @@ export const projects: Project[] = [
         slug: "healthflow-ai",
         title: "HealthFlow AI",
         description: "A hospital forecasting and advisory platform that predicts 7-day admissions and serves AI-backed trend explanations for planning and staffing.",
-        longDescription: "HealthFlow AI is a full-stack hospital intelligence platform that combines admissions forecasting, precomputed daily predictions, and AI-generated operational guidance for smarter planning.",
+        longDescription: "HealthFlow AI is a hospital intelligence platform that combines admissions forecasting, precomputed daily predictions, and AI-generated operational guidance for smarter planning.",
         tech: ["LightGBM", "Next.js 14", "PostgreSQL", "Flask", "Groq LLM", "Vercel"],
         metrics: [
             { label: "Forecast", value: "7 Days" },

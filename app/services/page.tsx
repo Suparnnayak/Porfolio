@@ -31,7 +31,7 @@ const aiFeatures = [
 ];
 
 const comparisonData = [
-    { feature: "Core strength", agency: "General-purpose delivery", me: "DSA, AI, and full-stack problem solving" },
+    { feature: "Core strength", agency: "General-purpose delivery", me: "DSA, AI, and systems-oriented problem solving" },
     { feature: "Typical context", agency: "Client projects", me: "Student projects, hackathons, and technical builds" },
     { feature: "Working style", agency: "Large team process", me: "Hands-on implementation and iteration" },
     { feature: "Decision making", agency: "Process first", me: "Problem first" },

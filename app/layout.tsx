@@ -42,8 +42,8 @@ export const metadata: Metadata = {
     metadataBase: getMetadataBase(),
     title: "Suparn Nayak — Portfolio",
     description:
-        "Portfolio of Suparn Nayak, a Computer Science student building AI, full-stack, and DSA-driven software projects.",
-    keywords: ["Suparn Nayak", "portfolio", "computer science", "AI", "full-stack", "DSA", "machine learning", "developer"],
+        "Portfolio of Suparn Nayak, a Computer Science student building AI, systems, and DSA-driven software projects.",
+    keywords: ["Suparn Nayak", "portfolio", "computer science", "AI", "systems", "DSA", "machine learning", "developer"],
     authors: [{ name: "Suparn Nayak" }],
     icons: {
         icon: "/fevicon.png",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: "Suparn Nayak — Portfolio",
-        description: "Computer Science student building AI, systems, and full-stack projects.",
+        description: "Computer Science student building AI, systems, and software projects.",
         type: "website",
     },
 };
@@ -76,58 +76,63 @@ export default function RootLayout({
 
                     {/* Bottom Navigation */}
                     <nav className="fixed bottom-0 left-0 w-full bg-ink border-t-[3px] border-ink z-[100] shadow-[0px_-4px_20px_rgba(0,0,0,0.3)]">
-                        <div className="overflow-x-auto hide-scrollbar">
-                            <div className="w-max min-w-full px-2 md:px-10 py-2.5 md:py-4 flex items-center justify-start md:justify-between gap-1.5 md:gap-2 whitespace-nowrap">
-                            <MagneticButton>
-                                <Link
-                                    href="/"
-                                    className="font-mono text-[0.62rem] md:text-sm font-bold uppercase tracking-[0.1em] md:tracking-[0.16em] text-cream/85 hover:text-acid transition-colors px-2.5 md:px-3 py-2"
-                                >
-                                    Home
-                                </Link>
-                            </MagneticButton>
-                            <MagneticButton>
-                                <Link
-                                    href="/work"
-                                    className="font-mono text-[0.62rem] md:text-sm font-bold uppercase tracking-[0.1em] md:tracking-[0.16em] text-cream/85 hover:text-acid transition-colors px-2.5 md:px-3 py-2"
-                                >
-                                    Work
-                                </Link>
-                            </MagneticButton>
-                            <MagneticButton>
-                                <Link
-                                    href="/stack"
-                                    className="font-mono text-[0.62rem] md:text-sm font-bold uppercase tracking-[0.1em] md:tracking-[0.16em] text-cream/85 hover:text-acid transition-colors px-2.5 md:px-3 py-2"
-                                >
-                                    Stack
-                                </Link>
-                            </MagneticButton>
-                            <MagneticButton>
-                                <Link
-                                    href="/services"
-                                    className="font-mono text-[0.62rem] md:text-sm font-bold uppercase tracking-[0.1em] md:tracking-[0.16em] text-cream/85 hover:text-acid transition-colors px-2.5 md:px-3 py-2"
-                                >
-                                    Services
-                                </Link>
-                            </MagneticButton>
-                            <MagneticButton>
-                                <Link
-                                    href="/resume"
-                                    className="font-mono text-[0.62rem] md:text-sm font-bold uppercase tracking-[0.1em] md:tracking-[0.16em] text-cream/85 hover:text-acid transition-colors px-2.5 md:px-3 py-2"
-                                >
-                                    Resume
-                                </Link>
-                            </MagneticButton>
-                            <ThemeToggle />
-                            <MagneticButton>
-                                <Link
-                                    href="/contact"
-                                    className="bg-acid text-ink px-3.5 md:px-5 py-2 md:py-2.5 font-heading font-bold text-[0.62rem] md:text-sm uppercase tracking-[0.1em] md:tracking-[0.16em] border-[2px] md:border-[3px] border-ink hover:bg-cream transition-colors"
-                                >
-                                    Let&apos;s Talk
-                                </Link>
-                            </MagneticButton>
-                        </div>
+                        <div className="px-2 md:px-10 py-2.5 md:py-4 flex items-center gap-2 md:gap-4">
+                            <div className="flex-1 overflow-x-auto hide-scrollbar">
+                                <div className="w-max min-w-full flex items-center justify-start md:justify-center gap-1.5 md:gap-2 whitespace-nowrap pr-2">
+                                    <MagneticButton>
+                                        <Link
+                                            href="/"
+                                            className="font-mono text-[0.62rem] md:text-sm font-bold uppercase tracking-[0.1em] md:tracking-[0.16em] text-cream/85 hover:text-acid transition-colors px-2.5 md:px-3 py-2"
+                                        >
+                                            Home
+                                        </Link>
+                                    </MagneticButton>
+                                    <MagneticButton>
+                                        <Link
+                                            href="/work"
+                                            className="font-mono text-[0.62rem] md:text-sm font-bold uppercase tracking-[0.1em] md:tracking-[0.16em] text-cream/85 hover:text-acid transition-colors px-2.5 md:px-3 py-2"
+                                        >
+                                            Work
+                                        </Link>
+                                    </MagneticButton>
+                                    <MagneticButton>
+                                        <Link
+                                            href="/stack"
+                                            className="font-mono text-[0.62rem] md:text-sm font-bold uppercase tracking-[0.1em] md:tracking-[0.16em] text-cream/85 hover:text-acid transition-colors px-2.5 md:px-3 py-2"
+                                        >
+                                            Stack
+                                        </Link>
+                                    </MagneticButton>
+                                    <MagneticButton>
+                                        <Link
+                                            href="/services"
+                                            className="font-mono text-[0.62rem] md:text-sm font-bold uppercase tracking-[0.1em] md:tracking-[0.16em] text-cream/85 hover:text-acid transition-colors px-2.5 md:px-3 py-2"
+                                        >
+                                            Services
+                                        </Link>
+                                    </MagneticButton>
+                                    <MagneticButton>
+                                        <Link
+                                            href="/resume"
+                                            className="font-mono text-[0.62rem] md:text-sm font-bold uppercase tracking-[0.1em] md:tracking-[0.16em] text-cream/85 hover:text-acid transition-colors px-2.5 md:px-3 py-2"
+                                        >
+                                            Resume
+                                        </Link>
+                                    </MagneticButton>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center gap-1.5 md:gap-2 flex-shrink-0 border-l border-cream/10 pl-2 md:pl-4">
+                                <ThemeToggle />
+                                <MagneticButton>
+                                    <Link
+                                        href="/contact"
+                                        className="inline-flex items-center justify-center bg-acid text-ink px-3.5 md:px-5 py-2 md:py-2.5 font-heading font-bold text-[0.62rem] md:text-sm uppercase tracking-[0.1em] md:tracking-[0.16em] border-[2px] md:border-[3px] border-ink hover:bg-cream transition-colors whitespace-nowrap"
+                                    >
+                                        Let&apos;s Talk
+                                    </Link>
+                                </MagneticButton>
+                            </div>
                         </div>
                     </nav>
 

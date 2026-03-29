@@ -14,7 +14,7 @@ const contactInfo = [
 ];
 
 const faqs = [
-    { q: "What kind of opportunities are you looking for?", a: "I&apos;m mainly looking for internships, project collaborations, hackathons, and software roles where I can contribute to AI, full-stack, or systems-oriented work." },
+    { q: "What kind of opportunities are you looking for?", a: "I&apos;m mainly looking for internships, project collaborations, hackathons, and software roles where I can contribute to AI, backend, or systems-oriented work." },
     { q: "What technologies do you work with most?", a: "Python, C++, SQL, Flask, Next.js, PostgreSQL, LightGBM, RAG pipelines, ChromaDB, and computer vision tools like YOLO and OpenCV." },
     { q: "Are your projects available publicly?", a: "Yes. The projects featured here are linked to GitHub, and I&apos;m happy to discuss the design choices, algorithms, and trade-offs behind them." },
     { q: "Can you collaborate on hackathons or student projects?", a: "Yes. I enjoy collaborating on ambitious ideas, especially when they involve problem solving, AI, useful product design, or strong system logic." },
@@ -127,7 +127,7 @@ export default function ContactPage() {
                         </h1>
                         <p className="font-mono text-sm md:text-base font-bold text-ink/60 max-w-lg leading-relaxed">
                             If you have an internship opportunity, project idea, collaboration, or just want to talk tech, feel free to reach out.
-                            I&apos;ve worked on 10+ projects across AI, full-stack, and problem-solving oriented builds.
+                            I&apos;ve worked on 10+ projects across AI, backend, and problem-solving oriented builds.
                         </p>
                     </motion.div>
                 </section>
@@ -411,7 +411,7 @@ export default function ContactPage() {
                             <div className="font-heading font-bold text-lg uppercase tracking-tight mb-2">Quick Snapshot</div>
                             <p className="font-mono text-xs font-bold opacity-70 leading-relaxed">
                                 B.E. Computer Science student, 250+ LeetCode problems solved, 50+ students mentored,
-                                and 10+ projects built across AI, systems, and full-stack development.
+                                and 10+ projects built across AI, systems, and backend-focused development.
                             </p>
                         </motion.div>
                     </div>

@@ -105,7 +105,7 @@ export default function WorkPage() {
                         Selected<br />Work
                     </h1>
                     <p className="font-mono text-sm md:text-base font-bold text-ink/60 max-w-lg leading-relaxed">
-                        A selected set from 10+ projects across AI, systems, and full-stack development.
+                        A selected set from 10+ projects across AI, systems, and software development.
                         Click any card to explore the idea, the implementation, and the outcome.
                     </p>
                 </motion.div>

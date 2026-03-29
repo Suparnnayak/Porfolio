@@ -70,7 +70,7 @@ const achievements = [
     },
     {
         title: "Projects",
-        body: "Built 10+ projects ranging from foundational builds to higher-level AI, systems, and full-stack applications.",
+        body: "Built 10+ projects ranging from foundational builds to higher-level AI, systems, and practical software applications.",
         accent: "bg-electric",
     },
     {
@@ -133,19 +133,19 @@ export default function Home() {
                 <div className="marquee-container font-mono font-bold text-ink uppercase tracking-widest text-xs">
                     <div className="marquee-content animate-marquee">
                         <span className="px-4 md:px-6">COMPUTER SCIENCE STUDENT&nbsp;///&nbsp;</span>
-                        <span className="px-4 md:px-6">AI + FULL-STACK BUILDER&nbsp;///&nbsp;</span>
+                        <span className="px-4 md:px-6">AI + SYSTEMS BUILDER&nbsp;///&nbsp;</span>
                         <span className="px-4 md:px-6">DSA-DRIVEN PROJECTS&nbsp;///&nbsp;</span>
                         <span className="px-4 md:px-6">HACKATHON READY&nbsp;///&nbsp;</span>
                         <span className="px-4 md:px-6">COMPUTER SCIENCE STUDENT&nbsp;///&nbsp;</span>
-                        <span className="px-4 md:px-6">AI + FULL-STACK BUILDER&nbsp;///&nbsp;</span>
+                        <span className="px-4 md:px-6">AI + SYSTEMS BUILDER&nbsp;///&nbsp;</span>
                     </div>
                     <div className="marquee-content animate-marquee" aria-hidden="true">
                         <span className="px-4 md:px-6">COMPUTER SCIENCE STUDENT&nbsp;///&nbsp;</span>
-                        <span className="px-4 md:px-6">AI + FULL-STACK BUILDER&nbsp;///&nbsp;</span>
+                        <span className="px-4 md:px-6">AI + SYSTEMS BUILDER&nbsp;///&nbsp;</span>
                         <span className="px-4 md:px-6">DSA-DRIVEN PROJECTS&nbsp;///&nbsp;</span>
                         <span className="px-4 md:px-6">HACKATHON READY&nbsp;///&nbsp;</span>
                         <span className="px-4 md:px-6">COMPUTER SCIENCE STUDENT&nbsp;///&nbsp;</span>
-                        <span className="px-4 md:px-6">AI + FULL-STACK BUILDER&nbsp;///&nbsp;</span>
+                        <span className="px-4 md:px-6">AI + SYSTEMS BUILDER&nbsp;///&nbsp;</span>
                     </div>
                 </div>
             </div>
@@ -177,7 +177,7 @@ export default function Home() {
                                     </span>
                                 </h1>
                                 <p className="theme-hero-body font-mono text-[0.95rem] md:text-lg lg:text-xl font-bold mt-5 md:mt-6 max-w-2xl leading-relaxed">
-                                    Computer Science student building DSA-first systems, AI applications, and practical full-stack products.
+                                    Computer Science student building DSA-first systems, AI applications, and practical software products.
                                     I enjoy turning ideas into working software with clean logic and measurable results across 10+ projects.
                                 </p>
                                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 md:mt-7 max-w-3xl">
@@ -219,7 +219,7 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div className="theme-hero-meta text-center lg:text-right font-mono text-[0.65rem] md:text-xs font-bold uppercase tracking-[0.24em] md:tracking-[0.28em]">
-                                    AI • Systems • Full-Stack • 10+ Projects
+                                    AI • Systems • Problem Solving • 10+ Projects
                                 </div>
                                 <a
                                     href="/contact"
@@ -433,26 +433,26 @@ export default function Home() {
 
                     <BentoGridItem
                         index={3}
-                        className="md:col-span-1"
+                        className="min-h-[16rem] md:col-span-1"
                         title="SkyRescue Vision"
                         description="UAV detection and SORT-based human tracking"
                         bgColor="bg-vivid"
                         textColor="text-cream"
                         icon={<Radar size={28} className="text-acid" />}
                         header={
-                            <div className="h-full w-full p-4 text-cream pointer-events-none">
+                            <div className="h-full w-full p-3 md:p-4 text-cream pointer-events-none">
                                 <div className="flex justify-between items-start">
-                                    <div className="font-mono text-[0.6rem] font-bold text-cream/55 tracking-widest uppercase">
+                                    <div className="font-mono text-[0.55rem] md:text-[0.6rem] font-bold text-cream/55 tracking-[0.18em] md:tracking-widest uppercase">
                                         CV://SKYRESCUE
                                     </div>
-                                    <Radar size={28} className="text-acid/70" />
+                                    <Radar size={24} className="text-acid/70 md:w-7 md:h-7" />
                                 </div>
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <span className="font-heading font-bold text-[3.8rem] md:text-[6rem] tracking-tighter text-cream/10 leading-none select-none">
                                         UAV
                                     </span>
                                 </div>
-                                <div className="absolute right-4 bottom-20 font-mono text-[0.55rem] font-bold uppercase tracking-[0.25em] text-cream/45">
+                                <div className="absolute right-4 bottom-20 hidden md:block font-mono text-[0.55rem] font-bold uppercase tracking-[0.25em] text-cream/45">
                                     Vision Pipeline
                                 </div>
                             </div>
@@ -462,7 +462,7 @@ export default function Home() {
 
                     <BentoGridItem
                         index={4}
-                        className="md:col-span-1"
+                        className="min-h-[16rem] md:col-span-1"
                         title="The Stack"
                         description="Languages, tools, AI, and deployment workflow"
                         bgColor="bg-ink"
@@ -470,9 +470,16 @@ export default function Home() {
                         icon={<Terminal size={28} className="text-cream" />}
                         href="/stack"
                         header={
-                            <div className="absolute top-3 right-3 animate-spin-slow">
-                                <Code2 size={40} className="opacity-10 text-cream" />
-                            </div>
+                            <>
+                                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                    <span className="font-heading font-bold text-[3.3rem] md:text-[5rem] tracking-tighter text-cream/10 leading-none select-none">
+                                        DEV
+                                    </span>
+                                </div>
+                                <div className="absolute top-3 right-3 animate-spin-slow">
+                                    <Code2 size={34} className="opacity-10 md:w-10 md:h-10 text-cream" />
+                                </div>
+                            </>
                         }
                     />
                 </BentoGrid>
@@ -505,7 +512,7 @@ export default function Home() {
                             </p>
                             <div className="flex items-center gap-3 p-4 border-[3px] border-cream/10">
                                 <div className="w-3 h-3 bg-acid animate-pulse-dot flex-shrink-0" />
-                                <span className="font-mono text-xs font-bold text-cream/65 uppercase tracking-wider">Currently exploring full-stack, ML, and systems-oriented projects</span>
+                                <span className="font-mono text-xs font-bold text-cream/65 uppercase tracking-wider">Currently exploring ML, backend, and systems-oriented projects</span>
                             </div>
                         </div>
 

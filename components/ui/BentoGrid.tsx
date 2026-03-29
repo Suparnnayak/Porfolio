@@ -86,7 +86,7 @@ export const BentoGridItem = ({
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             className={cn(
-                "row-span-1 relative overflow-hidden group neo-card h-full flex flex-col justify-between p-5 md:p-6 cursor-pointer neo-glow perspective-1000",
+                "row-span-1 relative overflow-hidden group neo-card h-full min-h-[15rem] sm:min-h-[16rem] md:min-h-0 flex flex-col justify-between p-5 md:p-6 cursor-pointer neo-glow perspective-1000",
                 bgColor,
                 textColor,
                 className
@@ -105,7 +105,7 @@ export const BentoGridItem = ({
             {/* Top Right Arrow */}
             <div className="relative z-10 flex justify-end" style={{ transform: "translateZ(30px)" }}>
                 {href && (
-                    <ArrowUpRight className="w-6 h-6 opacity-0 group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                    <ArrowUpRight className="w-6 h-6 opacity-60 md:opacity-0 md:group-hover:opacity-100 transition-all duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
                 )}
             </div>
 

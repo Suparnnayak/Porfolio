@@ -37,7 +37,7 @@ const categories = [
             { name: "PostgreSQL", level: 82, detail: "Used for forecast storage, serving, and analytics workflows." },
             { name: "MySQL", level: 78, detail: "Solid grounding in relational databases and query design." },
             { name: "Flask", level: 80, detail: "Used for lightweight ML and backend API integration." },
-            { name: "Next.js", level: 76, detail: "Full-stack UI layer for product-facing dashboards and apps." },
+            { name: "Next.js", level: 76, detail: "Frontend and product UI layer for dashboards and apps." },
             { name: "Docker", level: 72, detail: "Comfortable packaging apps and services for deployment." },
         ],
     },
@@ -100,7 +100,7 @@ export default function StackPage() {
                         My<br />Stack
                     </h1>
                     <p className="font-mono text-sm md:text-base font-bold text-ink/60 max-w-lg leading-relaxed">
-                        The tools here reflect what I use across coursework, projects, hackathons, and experiments in AI, backend, and full-stack development.
+                        The tools here reflect what I use across coursework, projects, hackathons, and experiments in AI, backend, and software development.
                     </p>
                 </motion.div>
             </section>
