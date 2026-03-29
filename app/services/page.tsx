@@ -42,7 +42,7 @@ const comparisonData = [
 
 export default function ServicesPage() {
     return (
-        <div className="min-h-screen bg-cream pb-24">
+        <div className="min-h-screen bg-cream pb-28 md:pb-24">
 
             {/* Status bar */}
             <div className="w-full bg-ink border-b-[3px] border-ink py-2 px-4 md:px-8 flex justify-between items-center">
@@ -60,8 +60,8 @@ export default function ServicesPage() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-ink/40 mb-3">Focus Areas</div>
-                    <h1 className="text-4xl sm:text-6xl md:text-[7rem] font-heading font-bold text-ink leading-[0.85] tracking-tighter uppercase mb-6">
+                    <div className="font-mono text-[0.65rem] md:text-xs font-bold uppercase tracking-[0.24em] md:tracking-[0.3em] text-ink/40 mb-3">Focus Areas</div>
+                    <h1 className="text-[2.8rem] sm:text-6xl md:text-[7rem] font-heading font-bold text-ink leading-[0.9] md:leading-[0.85] tracking-tighter uppercase mb-5 md:mb-6">
                         What I Build
                     </h1>
                     <p className="font-mono text-sm md:text-base font-bold text-ink/60 max-w-lg leading-relaxed">
@@ -198,7 +198,7 @@ export default function ServicesPage() {
                 <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-ink/40 mb-2">Why This Portfolio</div>
                 <h2 className="font-heading font-bold text-3xl md:text-4xl uppercase tracking-tight text-ink mb-8">How I Add Value</h2>
 
-                <div className="neo-card bg-cream overflow-hidden">
+                <div className="neo-card bg-cream overflow-hidden hidden md:block">
                     {/* Header row */}
                     <div className="grid grid-cols-3 bg-ink text-cream">
                         <div className="p-4 font-mono text-xs font-bold uppercase tracking-wider border-r border-cream/10"></div>
@@ -216,6 +216,24 @@ export default function ServicesPage() {
                             <div className="p-4 font-mono text-xs font-bold text-ink/60">{row.feature}</div>
                             <div className="p-4 font-mono text-xs font-bold text-ink/40 text-center border-x-[2px] border-ink/10">{row.agency}</div>
                             <div className="p-4 font-mono text-xs font-bold text-ink text-center">{row.me}</div>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="space-y-3 md:hidden">
+                    {comparisonData.map((row, i) => (
+                        <div key={i} className="neo-card bg-cream p-4">
+                            <div className="font-heading font-bold text-base uppercase tracking-tight text-ink mb-3">{row.feature}</div>
+                            <div className="space-y-3 font-mono text-xs font-bold">
+                                <div className="border-t-[2px] border-ink/10 pt-3">
+                                    <div className="uppercase tracking-widest text-ink/40 mb-1">Typical Setup</div>
+                                    <div className="text-ink/65">{row.agency}</div>
+                                </div>
+                                <div className="border-t-[2px] border-ink/10 pt-3">
+                                    <div className="uppercase tracking-widest text-acid mb-1">My Approach</div>
+                                    <div className="text-ink">{row.me}</div>
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>
@@ -240,7 +258,7 @@ export default function ServicesPage() {
                         </p>
                         <a
                             href="/contact"
-                            className="inline-block bg-acid text-ink font-heading font-bold text-lg uppercase tracking-wider px-8 py-4 border-[3px] border-ink shadow-neo hover:shadow-none hover:translate-x-[6px] hover:translate-y-[6px] transition-all"
+                            className="inline-flex w-full sm:w-auto justify-center bg-acid text-ink font-heading font-bold text-base md:text-lg uppercase tracking-wider px-8 py-4 border-[3px] border-ink shadow-neo hover:shadow-none hover:translate-x-[6px] hover:translate-y-[6px] transition-all"
                         >
                             Reach Out →
                         </a>

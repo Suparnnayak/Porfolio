@@ -558,6 +558,15 @@ body::before {
   display: none;
 }
 
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 .horizontal-scroll > * {
   scroll-snap-align: start;
   flex-shrink: 0;

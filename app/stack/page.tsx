@@ -75,7 +75,7 @@ const learning = [
 
 export default function StackPage() {
     return (
-        <div className="min-h-screen bg-cream pb-24">
+        <div className="min-h-screen bg-cream pb-28 md:pb-24">
 
             {/* Status bar */}
             <div className="w-full bg-ink border-b-[3px] border-ink py-2 px-4 md:px-8 flex justify-between items-center">
@@ -95,8 +95,8 @@ export default function StackPage() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-ink/40 mb-3">Tech Stack</div>
-                    <h1 className="text-4xl sm:text-6xl md:text-[7rem] font-heading font-bold text-ink leading-[0.85] tracking-tighter uppercase mb-6">
+                    <div className="font-mono text-[0.65rem] md:text-xs font-bold uppercase tracking-[0.24em] md:tracking-[0.3em] text-ink/40 mb-3">Tech Stack</div>
+                    <h1 className="text-[2.8rem] sm:text-6xl md:text-[7rem] font-heading font-bold text-ink leading-[0.9] md:leading-[0.85] tracking-tighter uppercase mb-5 md:mb-6">
                         My<br />Stack
                     </h1>
                     <p className="font-mono text-sm md:text-base font-bold text-ink/60 max-w-lg leading-relaxed">
@@ -123,7 +123,7 @@ export default function StackPage() {
                             )}
 
                             <div className="relative z-10">
-                                <div className="flex items-center justify-between mb-6">
+                                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
                                     <h2 className="font-heading font-bold text-2xl md:text-3xl uppercase tracking-tight">{cat.name}</h2>
                                     <span className="font-mono text-[0.6rem] font-bold uppercase tracking-widest opacity-50">
                                         {cat.tools.length} tools
@@ -204,7 +204,7 @@ export default function StackPage() {
                         </p>
                         <a
                             href="/contact"
-                            className="inline-block bg-acid text-ink font-heading font-bold text-lg uppercase tracking-wider px-8 py-4 border-[3px] border-ink shadow-neo hover:shadow-none hover:translate-x-[6px] hover:translate-y-[6px] transition-all"
+                            className="inline-flex w-full sm:w-auto justify-center bg-acid text-ink font-heading font-bold text-base md:text-lg uppercase tracking-wider px-8 py-4 border-[3px] border-ink shadow-neo hover:shadow-none hover:translate-x-[6px] hover:translate-y-[6px] transition-all"
                         >
                             Let&apos;s Build →
                         </a>

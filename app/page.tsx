@@ -128,7 +128,7 @@ export default function Home() {
     useKonamiCode(() => setKonamiActive(true));
 
     return (
-        <div className={`min-h-screen bg-cream pb-24 ${konamiActive ? "hue-rotate-180 transition-all duration-1000" : ""}`}>
+        <div className={`min-h-screen bg-cream pb-28 md:pb-24 ${konamiActive ? "hue-rotate-180 transition-all duration-1000" : ""}`}>
             <div className="w-full bg-acid border-b-[3px] border-ink py-2 overflow-hidden">
                 <div className="marquee-container font-mono font-bold text-ink uppercase tracking-widest text-xs">
                     <div className="marquee-content animate-marquee">
@@ -157,18 +157,18 @@ export default function Home() {
                     <div className="absolute top-1/3 left-1/3 w-48 md:w-[300px] h-48 md:h-[300px] bg-hotpink/8 rounded-full blur-3xl animate-blob" style={{ animationDelay: "4s" }} />
                 </div>
 
-                <div className="max-w-[92rem] mx-auto px-4 md:px-8 py-14 md:py-20 w-full relative z-10">
+                <div className="max-w-[92rem] mx-auto px-4 md:px-8 py-12 md:py-20 w-full relative z-10">
                     <motion.div style={{ y: heroY, opacity: heroOpacity }}>
-                        <header className="grid lg:grid-cols-[1.3fr_0.9fr] gap-8 lg:gap-12 items-start">
+                        <header className="grid lg:grid-cols-[1.3fr_0.9fr] gap-6 md:gap-8 lg:gap-12 items-start">
                             <motion.div
                                 initial={{ opacity: 0, x: -60 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
                             >
-                                <div className="font-mono text-xs md:text-sm font-bold uppercase tracking-[0.35em] text-ink/50 mb-5">
+                                <div className="font-mono text-[0.65rem] md:text-sm font-bold uppercase tracking-[0.28em] md:tracking-[0.35em] text-ink/50 mb-4 md:mb-5">
                                     Portfolio / {new Date().getFullYear()}
                                 </div>
-                                <h1 className="text-6xl sm:text-8xl md:text-[9rem] lg:text-[11rem] xl:text-[12.5rem] font-heading font-bold text-ink leading-[0.82] tracking-[-0.06em] uppercase max-w-[10ch]">
+                                <h1 className="text-[3.35rem] sm:text-8xl md:text-[9rem] lg:text-[11rem] xl:text-[12.5rem] font-heading font-bold text-ink leading-[0.84] md:leading-[0.82] tracking-[-0.06em] uppercase max-w-[8ch] md:max-w-[10ch]">
                                     Suparn
                                     <br />
                                     <span className="relative inline-block">
@@ -176,11 +176,11 @@ export default function Home() {
                                         <span className="absolute -right-2 -top-2 md:-right-5 md:-top-5 w-5 h-5 md:w-8 md:h-8 bg-acid border-[3px] border-ink animate-spin-slow" />
                                     </span>
                                 </h1>
-                                <p className="theme-hero-body font-mono text-base md:text-lg lg:text-xl font-bold mt-6 max-w-2xl leading-relaxed">
+                                <p className="theme-hero-body font-mono text-[0.95rem] md:text-lg lg:text-xl font-bold mt-5 md:mt-6 max-w-2xl leading-relaxed">
                                     Computer Science student building DSA-first systems, AI applications, and practical full-stack products.
                                     I enjoy turning ideas into working software with clean logic and measurable results across 10+ projects.
                                 </p>
-                                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-7 max-w-3xl">
+                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 md:mt-7 max-w-3xl">
                                     <div className="neo-card bg-cream px-4 py-3 md:px-5 md:py-4">
                                         <div className="font-mono text-[0.55rem] font-bold uppercase tracking-[0.25em] text-ink/40">Education</div>
                                         <div className="font-heading font-bold text-lg md:text-xl uppercase tracking-tight text-ink">B.E. CSE</div>
@@ -204,9 +204,9 @@ export default function Home() {
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: 0.3 }}
-                                className="flex flex-col items-start lg:items-end gap-5 lg:pt-10"
+                                className="flex flex-col items-center lg:items-end gap-4 md:gap-5 lg:pt-10"
                             >
-                                <div className="neo-card bg-acid p-2 overflow-hidden w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-[26rem] lg:h-[26rem] xl:w-[28rem] xl:h-[28rem] rotate-[-2deg] neo-glow">
+                                <div className="neo-card bg-acid p-2 overflow-hidden w-full max-w-[18rem] aspect-square sm:max-w-[20rem] md:max-w-[24rem] lg:max-w-[26rem] xl:max-w-[28rem] rotate-[-2deg] neo-glow">
                                     <div className="relative w-full h-full border-[3px] border-ink overflow-hidden">
                                         <Image
                                             src="/headshot.png"
@@ -218,17 +218,17 @@ export default function Home() {
                                         />
                                     </div>
                                 </div>
-                                <div className="theme-hero-meta font-mono text-[0.65rem] md:text-xs font-bold uppercase tracking-[0.28em]">
+                                <div className="theme-hero-meta text-center lg:text-right font-mono text-[0.65rem] md:text-xs font-bold uppercase tracking-[0.24em] md:tracking-[0.28em]">
                                     AI • Systems • Full-Stack • 10+ Projects
                                 </div>
                                 <a
                                     href="/contact"
-                                    className="neo-card bg-ink text-cream px-7 py-3.5 font-heading font-bold text-sm md:text-base uppercase tracking-[0.18em] flex items-center gap-2 hover:bg-acid hover:text-ink transition-all group neo-glow"
+                                    className="neo-card bg-ink text-cream w-full sm:w-auto justify-center px-7 py-3.5 font-heading font-bold text-sm md:text-base uppercase tracking-[0.18em] flex items-center gap-2 hover:bg-acid hover:text-ink transition-all group neo-glow"
                                 >
                                     Let&apos;s Connect
                                     <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                                 </a>
-                                <div className="theme-hero-status flex items-center gap-3">
+                                <div className="theme-hero-status flex items-center justify-center lg:justify-end gap-3 text-center">
                                     <div className="w-2 h-2 bg-acid animate-pulse-dot" />
                                     <span className="font-mono text-xs font-bold uppercase tracking-wider">Open to internships and collaborations</span>
                                 </div>
@@ -356,7 +356,7 @@ export default function Home() {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
-                    className="flex items-end justify-between mb-6"
+                    className="flex flex-col md:flex-row md:items-end justify-between gap-3 mb-6"
                 >
                     <div>
                         <div className="theme-section-kicker font-mono text-xs font-bold uppercase tracking-[0.3em] mb-2">Featured</div>
@@ -379,7 +379,7 @@ export default function Home() {
                         href="/work/aidlink"
                         header={
                             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                <span className="text-[5rem] md:text-[10rem] font-heading font-bold tracking-tighter text-ink/10 leading-none select-none">DSA</span>
+                                    <span className="text-[4.2rem] md:text-[10rem] font-heading font-bold tracking-tighter text-ink/10 leading-none select-none">DSA</span>
                             </div>
                         }
                     />
@@ -399,7 +399,7 @@ export default function Home() {
                                     AI://HEALTHFLOW
                                 </div>
                                 <div className="absolute inset-0 flex items-center justify-center">
-                                    <span className="font-heading font-bold text-[3.8rem] md:text-[5rem] tracking-tighter text-cream/10 leading-none select-none">
+                                    <span className="font-heading font-bold text-[3.2rem] md:text-[5rem] tracking-tighter text-cream/10 leading-none select-none">
                                         AI
                                     </span>
                                 </div>
@@ -448,7 +448,7 @@ export default function Home() {
                                     <Radar size={28} className="text-acid/70" />
                                 </div>
                                 <div className="absolute inset-0 flex items-center justify-center">
-                                    <span className="font-heading font-bold text-[4.5rem] md:text-[6rem] tracking-tighter text-cream/10 leading-none select-none">
+                                    <span className="font-heading font-bold text-[3.8rem] md:text-[6rem] tracking-tighter text-cream/10 leading-none select-none">
                                         UAV
                                     </span>
                                 </div>
@@ -572,7 +572,7 @@ export default function Home() {
                 className="max-w-7xl mx-auto px-4 md:px-8 mb-12 md:mb-20"
             >
                 <div className="theme-section-kicker font-mono text-xs font-bold uppercase tracking-[0.3em] mb-2">Focus Areas</div>
-                <div className="flex items-end justify-between mb-6">
+                <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 mb-6">
                     <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight text-ink">What I Build</h2>
                     <a href="/services" className="font-mono text-sm font-bold uppercase tracking-wider text-ink hover:text-vivid transition-colors flex items-center gap-1 group">
                         Details <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -581,7 +581,7 @@ export default function Home() {
 
                 <div className="grid md:grid-cols-2 gap-5">
                     <motion.div variants={fadeUp}>
-                        <div className="neo-card bg-acid text-ink p-6 md:p-8 h-full relative overflow-hidden group gradient-top-accent neo-glow">
+                        <div className="neo-card bg-acid text-ink p-5 md:p-8 h-full relative overflow-hidden group gradient-top-accent neo-glow">
                             <CrossHatch className="absolute top-0 right-0 w-24 h-24 text-ink opacity-50" />
                             <div className="relative z-10">
                                 <Zap size={32} className="mb-4" />
@@ -602,7 +602,7 @@ export default function Home() {
                     </motion.div>
 
                     <motion.div variants={fadeUp}>
-                        <div className="neo-card bg-electric text-cream p-6 md:p-8 h-full relative overflow-hidden group gradient-top-accent neo-glow-blue">
+                        <div className="neo-card bg-electric text-cream p-5 md:p-8 h-full relative overflow-hidden group gradient-top-accent neo-glow-blue">
                             <CircuitPattern className="absolute bottom-0 left-0 w-32 h-32 text-cream/10" />
                             <div className="relative z-10">
                                 <Brain size={32} className="mb-4 text-acid" />
@@ -631,7 +631,7 @@ export default function Home() {
                 transition={{ duration: 0.5 }}
                 className="max-w-7xl mx-auto px-4 md:px-8 mb-12"
             >
-                <div className="neo-card bg-hotpink text-cream p-8 md:p-12 text-center relative overflow-hidden gradient-top-accent">
+                <div className="neo-card bg-hotpink text-cream p-6 md:p-12 text-center relative overflow-hidden gradient-top-accent">
                     <GridDots className="absolute inset-0 w-full h-full text-cream/5" />
                     <div className="absolute top-0 left-1/4 w-1/2 h-32 bg-acid/10 blur-3xl pointer-events-none" />
                     <div className="relative z-10">
@@ -639,14 +639,14 @@ export default function Home() {
                         <p className="font-mono text-sm md:text-base font-bold opacity-80 mb-4 max-w-xl mx-auto">
                             I&apos;m currently open to internships, project collaborations, hackathons, and interesting software problems.
                         </p>
-                        <div className="flex items-center justify-center gap-2 mb-8 text-cream/78">
+                        <div className="flex flex-wrap items-center justify-center gap-2 mb-8 text-cream/78">
                             <Star size={14} className="text-acid" />
                             <span className="font-mono text-xs font-bold uppercase tracking-wider">Best reached by email or LinkedIn</span>
                             <Star size={14} className="text-acid" />
                         </div>
                         <a
                             href="/contact"
-                            className="inline-block bg-cream text-ink font-heading font-bold text-lg uppercase tracking-wider px-8 py-4 border-[3px] border-ink shadow-neo hover:shadow-none hover:translate-x-[6px] hover:translate-y-[6px] transition-all hover-shake"
+                            className="inline-flex w-full sm:w-auto justify-center bg-cream text-ink font-heading font-bold text-base md:text-lg uppercase tracking-wider px-8 py-4 border-[3px] border-ink shadow-neo hover:shadow-none hover:translate-x-[6px] hover:translate-y-[6px] transition-all hover-shake"
                         >
                             Get In Touch →
                         </a>

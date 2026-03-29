@@ -60,11 +60,12 @@ export default function RootLayout({
 
                     {/* Bottom Navigation */}
                     <nav className="fixed bottom-0 left-0 w-full bg-ink border-t-[3px] border-ink z-[100] shadow-[0px_-4px_20px_rgba(0,0,0,0.3)]">
-                        <div className="w-full px-3 md:px-10 py-3 md:py-4 flex justify-between items-center gap-1 md:gap-2">
+                        <div className="overflow-x-auto hide-scrollbar">
+                            <div className="w-max min-w-full px-2 md:px-10 py-2.5 md:py-4 flex items-center justify-start md:justify-between gap-1.5 md:gap-2 whitespace-nowrap">
                             <MagneticButton>
                                 <Link
                                     href="/"
-                                    className="font-mono text-[0.72rem] md:text-sm font-bold uppercase tracking-[0.16em] text-cream/85 hover:text-acid transition-colors px-2 md:px-3 py-1.5"
+                                    className="font-mono text-[0.62rem] md:text-sm font-bold uppercase tracking-[0.1em] md:tracking-[0.16em] text-cream/85 hover:text-acid transition-colors px-2.5 md:px-3 py-2"
                                 >
                                     Home
                                 </Link>
@@ -72,7 +73,7 @@ export default function RootLayout({
                             <MagneticButton>
                                 <Link
                                     href="/work"
-                                    className="font-mono text-[0.72rem] md:text-sm font-bold uppercase tracking-[0.16em] text-cream/85 hover:text-acid transition-colors px-2 md:px-3 py-1.5"
+                                    className="font-mono text-[0.62rem] md:text-sm font-bold uppercase tracking-[0.1em] md:tracking-[0.16em] text-cream/85 hover:text-acid transition-colors px-2.5 md:px-3 py-2"
                                 >
                                     Work
                                 </Link>
@@ -80,7 +81,7 @@ export default function RootLayout({
                             <MagneticButton>
                                 <Link
                                     href="/stack"
-                                    className="font-mono text-[0.72rem] md:text-sm font-bold uppercase tracking-[0.16em] text-cream/85 hover:text-acid transition-colors px-2 md:px-3 py-1.5"
+                                    className="font-mono text-[0.62rem] md:text-sm font-bold uppercase tracking-[0.1em] md:tracking-[0.16em] text-cream/85 hover:text-acid transition-colors px-2.5 md:px-3 py-2"
                                 >
                                     Stack
                                 </Link>
@@ -88,7 +89,7 @@ export default function RootLayout({
                             <MagneticButton>
                                 <Link
                                     href="/services"
-                                    className="font-mono text-[0.72rem] md:text-sm font-bold uppercase tracking-[0.16em] text-cream/85 hover:text-acid transition-colors px-2 md:px-3 py-1.5"
+                                    className="font-mono text-[0.62rem] md:text-sm font-bold uppercase tracking-[0.1em] md:tracking-[0.16em] text-cream/85 hover:text-acid transition-colors px-2.5 md:px-3 py-2"
                                 >
                                     Services
                                 </Link>
@@ -96,7 +97,7 @@ export default function RootLayout({
                             <MagneticButton>
                                 <Link
                                     href="/resume"
-                                    className="font-mono text-[0.72rem] md:text-sm font-bold uppercase tracking-[0.16em] text-cream/85 hover:text-acid transition-colors px-2 md:px-3 py-1.5"
+                                    className="font-mono text-[0.62rem] md:text-sm font-bold uppercase tracking-[0.1em] md:tracking-[0.16em] text-cream/85 hover:text-acid transition-colors px-2.5 md:px-3 py-2"
                                 >
                                     Resume
                                 </Link>
@@ -105,11 +106,12 @@ export default function RootLayout({
                             <MagneticButton>
                                 <Link
                                     href="/contact"
-                                    className="bg-acid text-ink px-4 md:px-5 py-2 md:py-2.5 font-heading font-bold text-[0.72rem] md:text-sm uppercase tracking-[0.16em] border-[2px] md:border-[3px] border-ink hover:bg-cream transition-colors"
+                                    className="bg-acid text-ink px-3.5 md:px-5 py-2 md:py-2.5 font-heading font-bold text-[0.62rem] md:text-sm uppercase tracking-[0.1em] md:tracking-[0.16em] border-[2px] md:border-[3px] border-ink hover:bg-cream transition-colors"
                                 >
                                     Let&apos;s Talk
                                 </Link>
                             </MagneticButton>
+                        </div>
                         </div>
                     </nav>
 

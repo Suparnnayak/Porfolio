@@ -15,7 +15,7 @@ export default function CaseStudyClient({ slug }: { slug: string }) {
     }
 
     return (
-        <div className="min-h-screen bg-cream pb-24">
+        <div className="min-h-screen bg-cream pb-28 md:pb-24">
             {/* Status bar */}
             <div className="w-full bg-ink border-b-[3px] border-ink py-2 px-4 md:px-8 flex justify-between items-center">
                 <div className="flex items-center gap-2">
@@ -47,10 +47,10 @@ export default function CaseStudyClient({ slug }: { slug: string }) {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-ink/40 mb-3">
+                    <div className="font-mono text-[0.65rem] md:text-xs font-bold uppercase tracking-[0.24em] md:tracking-[0.3em] text-ink/40 mb-3">
                         Project {project.id}
                     </div>
-                    <h1 className="text-4xl sm:text-6xl md:text-[7rem] font-heading font-bold text-ink leading-[0.85] tracking-tighter uppercase mb-6">
+                    <h1 className="text-[2.8rem] sm:text-6xl md:text-[7rem] font-heading font-bold text-ink leading-[0.9] md:leading-[0.85] tracking-tighter uppercase mb-5 md:mb-6">
                         {project.title}
                     </h1>
                     <p className="font-mono text-sm md:text-base font-bold text-ink/60 max-w-2xl leading-relaxed">
@@ -61,7 +61,7 @@ export default function CaseStudyClient({ slug }: { slug: string }) {
 
             {/* Metrics strip */}
             <section className="max-w-7xl mx-auto px-4 md:px-8 mb-10 md:mb-16">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                     {project.metrics.map((m) => (
                         <motion.div
                             key={m.label}
@@ -80,7 +80,7 @@ export default function CaseStudyClient({ slug }: { slug: string }) {
                         viewport={{ once: true }}
                         className="neo-card bg-ink text-cream p-4 text-center neo-glow"
                     >
-                        <div className="font-heading font-bold text-2xl md:text-3xl text-acid">{project.category}</div>
+                        <div className="font-heading font-bold text-xl md:text-3xl text-acid break-words">{project.category}</div>
                         <div className="font-mono text-[0.6rem] font-bold uppercase tracking-widest mt-1 opacity-50">Category</div>
                     </motion.div>
                 </div>
@@ -187,8 +187,8 @@ export default function CaseStudyClient({ slug }: { slug: string }) {
             <section className="max-w-7xl mx-auto px-4 md:px-8 mb-12">
                 <div className="neo-card bg-ink text-cream p-6 md:p-10 relative overflow-hidden gradient-top-accent">
                     <GridDots className="absolute inset-0 w-full h-full text-cream/3" />
-                    <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
-                        <div>
+                    <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                        <div className="w-full md:w-auto">
                             <h3 className="font-heading font-bold text-2xl md:text-3xl uppercase tracking-tight mb-2">
                                 Want something like this?
                             </h3>
@@ -196,11 +196,11 @@ export default function CaseStudyClient({ slug }: { slug: string }) {
                                 Let&apos;s build it. I ship fast and I ship clean.
                             </p>
                         </div>
-                        <div className="flex gap-3">
+                        <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
                             <a
                                 href={project.link}
                                 target="_blank"
-                                className="neo-card bg-cream text-ink px-5 py-3 font-heading font-bold text-sm uppercase tracking-wider flex items-center gap-2 hover:bg-acid transition-colors group"
+                                className="neo-card bg-cream text-ink px-5 py-3 font-heading font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-acid transition-colors group"
                             >
                                 <Github size={16} />
                                 View Code
@@ -208,7 +208,7 @@ export default function CaseStudyClient({ slug }: { slug: string }) {
                             </a>
                             <Link
                                 href="/contact"
-                                className="neo-card bg-acid text-ink px-5 py-3 font-heading font-bold text-sm uppercase tracking-wider flex items-center gap-2 hover:bg-electric hover:text-cream transition-colors group"
+                                className="neo-card bg-acid text-ink px-5 py-3 font-heading font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-electric hover:text-cream transition-colors group"
                             >
                                 Hire Me
                                 <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

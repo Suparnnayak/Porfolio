@@ -7,7 +7,7 @@ import { CircuitPattern, GridDots } from "@/components/ui/Decorative";
 
 export default function NotFound() {
     return (
-        <div className="min-h-screen bg-cream flex items-center justify-center pb-24">
+        <div className="min-h-screen bg-cream flex items-center justify-center pb-28 md:pb-24">
             <div className="max-w-2xl mx-auto px-4 text-center relative">
                 <CircuitPattern className="absolute top-0 right-0 w-48 h-48 text-ink/5" />
                 <GridDots className="absolute bottom-0 left-0 w-32 h-32 text-ink/5" />
@@ -48,14 +48,14 @@ export default function NotFound() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                         <Link
                             href="/"
-                            className="neo-card bg-acid text-ink px-6 py-3 font-heading font-bold text-sm uppercase tracking-wider flex items-center gap-2 hover:bg-ink hover:text-cream transition-all group"
+                            className="neo-card bg-acid text-ink w-full sm:w-auto justify-center px-6 py-3 font-heading font-bold text-sm uppercase tracking-wider flex items-center gap-2 hover:bg-ink hover:text-cream transition-all group"
                         >
                             Go Home
                             <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                         </Link>
                         <Link
                             href="/contact"
-                            className="neo-card bg-ink text-cream px-6 py-3 font-heading font-bold text-sm uppercase tracking-wider flex items-center gap-2 hover:bg-electric transition-colors group"
+                            className="neo-card bg-ink text-cream w-full sm:w-auto justify-center px-6 py-3 font-heading font-bold text-sm uppercase tracking-wider flex items-center gap-2 hover:bg-electric transition-colors group"
                         >
                             Let&apos;s Talk Instead
                             <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

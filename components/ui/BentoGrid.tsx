@@ -86,7 +86,7 @@ export const BentoGridItem = ({
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             className={cn(
-                "row-span-1 relative overflow-hidden group neo-card h-full flex flex-col justify-between p-6 cursor-pointer neo-glow perspective-1000",
+                "row-span-1 relative overflow-hidden group neo-card h-full flex flex-col justify-between p-5 md:p-6 cursor-pointer neo-glow perspective-1000",
                 bgColor,
                 textColor,
                 className
@@ -113,10 +113,10 @@ export const BentoGridItem = ({
             <div className="relative z-10 mt-auto flex flex-col gap-2" style={{ transform: "translateZ(40px)" }}>
                 {icon}
                 <div className="border-t-[3px] border-current pt-3">
-                    <div className="font-heading font-bold text-xl md:text-2xl uppercase tracking-tight leading-none mb-1">
+                    <div className="font-heading font-bold text-lg sm:text-xl md:text-2xl uppercase tracking-tight leading-none mb-1">
                         {title}
                     </div>
-                    <div className="font-mono text-[0.7rem] font-bold uppercase opacity-70 tracking-widest leading-relaxed">
+                    <div className="font-mono text-[0.65rem] md:text-[0.7rem] font-bold uppercase opacity-70 tracking-[0.12em] md:tracking-widest leading-relaxed">
                         {description}
                     </div>
                 </div>

@@ -26,12 +26,12 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
     return (
         <motion.div ref={ref} variants={fadeUp}>
             <Link href={`/work/${project.slug}`} className="block h-full group">
-                <div className={`neo-card ${project.color} ${project.textColor} p-6 md:p-8 h-full flex flex-col justify-between min-h-[22rem] md:min-h-[24rem] relative overflow-hidden neo-glow`}>
+                <div className={`neo-card ${project.color} ${project.textColor} p-5 md:p-8 h-full flex flex-col justify-between min-h-[20rem] md:min-h-[24rem] relative overflow-hidden neo-glow`}>
                     {/* Background accent */}
                     <CircuitPattern className="absolute top-0 right-0 w-32 h-32 opacity-[0.06]" />
 
                     {/* ID overlay */}
-                    <div className="absolute top-4 right-4 font-heading font-bold text-[4rem] md:text-[6rem] leading-none opacity-[0.06] select-none tracking-tighter">
+                    <div className="absolute top-4 right-4 font-heading font-bold text-[3rem] md:text-[6rem] leading-none opacity-[0.06] select-none tracking-tighter">
                         {project.id}
                     </div>
 
@@ -60,9 +60,9 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
                         </div>
 
                         {/* Metrics */}
-                        <div className="flex gap-4">
+                        <div className="grid grid-cols-3 gap-3 max-w-sm pr-12">
                             {project.metrics.map((m) => (
-                                <div key={m.label}>
+                                <div key={m.label} className="min-w-0">
                                     <div className="font-heading font-bold text-lg">{m.value}</div>
                                     <div className="font-mono text-[0.5rem] font-bold uppercase tracking-wider opacity-50">{m.label}</div>
                                 </div>
@@ -82,7 +82,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
 
 export default function WorkPage() {
     return (
-        <div className="min-h-screen bg-cream pb-24">
+        <div className="min-h-screen bg-cream pb-28 md:pb-24">
 
             {/* Status bar */}
             <div className="w-full bg-ink border-b-[3px] border-ink py-2 px-4 md:px-8 flex justify-between items-center">
@@ -100,8 +100,8 @@ export default function WorkPage() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-ink/40 mb-3">Portfolio</div>
-                    <h1 className="text-4xl sm:text-6xl md:text-[7rem] font-heading font-bold text-ink leading-[0.85] tracking-tighter uppercase mb-6">
+                    <div className="font-mono text-[0.65rem] md:text-xs font-bold uppercase tracking-[0.24em] md:tracking-[0.3em] text-ink/40 mb-3">Portfolio</div>
+                    <h1 className="text-[2.8rem] sm:text-6xl md:text-[7rem] font-heading font-bold text-ink leading-[0.9] md:leading-[0.85] tracking-tighter uppercase mb-5 md:mb-6">
                         Selected<br />Work
                     </h1>
                     <p className="font-mono text-sm md:text-base font-bold text-ink/60 max-w-lg leading-relaxed">
@@ -141,8 +141,8 @@ export default function WorkPage() {
                     <GridDots className="absolute inset-0 w-full h-full text-cream/3" />
                     <div className="absolute top-0 left-1/4 w-1/2 h-20 bg-acid/10 blur-3xl pointer-events-none" />
 
-                    <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
-                        <div>
+                    <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                        <div className="w-full md:w-auto">
                             <h3 className="font-heading font-bold text-2xl md:text-3xl uppercase tracking-tight mb-2">
                                 See All My Code
                             </h3>
@@ -153,7 +153,7 @@ export default function WorkPage() {
                         <a
                             href="https://github.com/Suparnnayak"
                             target="_blank"
-                            className="neo-card bg-cream text-ink px-6 py-3 font-heading font-bold text-sm uppercase tracking-wider flex items-center gap-2 hover:bg-acid transition-colors group flex-shrink-0"
+                            className="neo-card bg-cream text-ink w-full sm:w-auto justify-center px-6 py-3 font-heading font-bold text-sm uppercase tracking-wider flex items-center gap-2 hover:bg-acid transition-colors group flex-shrink-0"
                         >
                             <Github size={18} />
                             GitHub Profile

@@ -99,7 +99,7 @@ export default function ContactPage() {
     };
 
     return (
-        <div className="min-h-screen bg-cream pb-24">
+        <div className="min-h-screen bg-cream pb-28 md:pb-24">
 
             {/* Status bar */}
             <div className="w-full bg-ink border-b-[3px] border-ink py-2 px-4 md:px-8 flex justify-between items-center">
@@ -119,8 +119,8 @@ export default function ContactPage() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                     >
-                        <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-ink/40 mb-3">Get in Touch</div>
-                        <h1 className="text-4xl sm:text-6xl md:text-[7rem] font-heading font-bold text-ink leading-[0.85] tracking-tighter uppercase mb-6">
+                        <div className="font-mono text-[0.65rem] md:text-xs font-bold uppercase tracking-[0.24em] md:tracking-[0.3em] text-ink/40 mb-3">Get in Touch</div>
+                        <h1 className="text-[2.8rem] sm:text-6xl md:text-[7rem] font-heading font-bold text-ink leading-[0.9] md:leading-[0.85] tracking-tighter uppercase mb-5 md:mb-6">
                             Let&apos;s
                             <br />
                             Connect
@@ -151,11 +151,11 @@ export default function ContactPage() {
                                     <p className="font-mono text-sm font-bold opacity-70 max-w-sm mx-auto">
                                         Thanks for reaching out. I&apos;ll get back to you as soon as I can.
                                     </p>
-                                    <div className="flex gap-3 mt-6">
-                                        <a href="/work" className="neo-card bg-ink text-cream px-4 py-2 font-mono text-sm font-bold uppercase">
+                                    <div className="flex flex-col sm:flex-row gap-3 mt-6 w-full max-w-sm">
+                                        <a href="/work" className="neo-card bg-ink text-cream px-4 py-2 font-mono text-sm font-bold uppercase text-center">
                                             View Work
                                         </a>
-                                        <a href="https://github.com/Suparnnayak" target="_blank" className="neo-card bg-ink text-cream px-4 py-2 font-mono text-sm font-bold uppercase flex items-center gap-2">
+                                        <a href="https://github.com/Suparnnayak" target="_blank" className="neo-card bg-ink text-cream px-4 py-2 font-mono text-sm font-bold uppercase flex items-center justify-center gap-2">
                                             <Github size={14} /> GitHub
                                         </a>
                                     </div>
@@ -267,7 +267,7 @@ export default function ContactPage() {
                                     )}
 
                                     {/* Navigation */}
-                                    <div className="flex justify-between items-center mt-8">
+                                    <div className="flex justify-between items-center gap-3 mt-8">
                                         <button
                                             onClick={() => setStep(Math.max(0, step - 1))}
                                             className={`font-mono text-sm font-bold uppercase tracking-wider transition-colors ${step === 0 ? "opacity-0 pointer-events-none" : "text-ink/40 hover:text-ink"
@@ -280,7 +280,7 @@ export default function ContactPage() {
                                             <button
                                                 onClick={() => canAdvance() && setStep(step + 1)}
                                                 disabled={!canAdvance()}
-                                                className={`neo-card px-6 py-3 font-heading font-bold text-sm uppercase tracking-wider flex items-center gap-2 transition-all ${canAdvance()
+                                                className={`neo-card px-5 md:px-6 py-3 font-heading font-bold text-sm uppercase tracking-wider flex items-center gap-2 transition-all ${canAdvance()
                                                         ? "bg-ink text-cream hover:bg-acid hover:text-ink"
                                                         : "bg-ink/20 text-ink/30 cursor-not-allowed"
                                                     }`}
@@ -291,7 +291,7 @@ export default function ContactPage() {
                                             <button
                                                 onClick={handleSubmit}
                                                 disabled={!canAdvance() || isSubmitting}
-                                                className={`neo-card px-6 py-3 font-heading font-bold text-sm uppercase tracking-wider flex items-center gap-2 transition-all ${canAdvance() && !isSubmitting
+                                                className={`neo-card px-5 md:px-6 py-3 font-heading font-bold text-sm uppercase tracking-wider flex items-center gap-2 transition-all ${canAdvance() && !isSubmitting
                                                         ? "bg-acid text-ink hover:shadow-neo"
                                                         : "bg-ink/20 text-ink/30 cursor-not-allowed"
                                                     }`}
