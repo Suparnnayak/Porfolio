@@ -17,7 +17,7 @@ export default function CaseStudyClient({ slug }: { slug: string }) {
     return (
         <div className="min-h-screen bg-cream pb-28 md:pb-24">
             {/* Status bar */}
-            <div className="w-full bg-ink border-b-[3px] border-ink py-2 px-4 md:px-8 flex justify-between items-center">
+            <div className="w-full bg-ink border-b-[3px] border-ink py-2 px-2 sm:px-4 md:px-8 flex justify-between items-center">
                 <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-acid animate-pulse-dot" />
                     <span className="font-mono text-xs font-bold text-cream/75 uppercase tracking-widest">
@@ -30,7 +30,7 @@ export default function CaseStudyClient({ slug }: { slug: string }) {
             </div>
 
             {/* Back nav */}
-            <div className="max-w-7xl mx-auto px-4 md:px-8 mt-6">
+            <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 mt-6">
                 <Link
                     href="/work"
                     className="inline-flex items-center gap-2 font-mono text-xs font-bold text-ink/40 uppercase tracking-wider hover:text-ink transition-colors group"
@@ -41,7 +41,7 @@ export default function CaseStudyClient({ slug }: { slug: string }) {
             </div>
 
             {/* Header */}
-            <section className="max-w-7xl mx-auto px-4 md:px-8 mt-6 mb-8 md:mb-12">
+            <section className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 mt-6 mb-8 md:mb-12">
                 <motion.div
                     initial={{ opacity: 0, x: -40 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -60,7 +60,7 @@ export default function CaseStudyClient({ slug }: { slug: string }) {
             </section>
 
             {/* Metrics strip */}
-            <section className="max-w-7xl mx-auto px-4 md:px-8 mb-10 md:mb-16">
+            <section className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 mb-10 md:mb-16">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                     {project.metrics.map((m) => (
                         <motion.div
@@ -87,7 +87,7 @@ export default function CaseStudyClient({ slug }: { slug: string }) {
             </section>
 
             {/* Problem / Solution */}
-            <section className="max-w-7xl mx-auto px-4 md:px-8 mb-10 md:mb-16">
+            <section className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 mb-10 md:mb-16">
                 <div className="grid md:grid-cols-2 gap-5">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -129,7 +129,7 @@ export default function CaseStudyClient({ slug }: { slug: string }) {
             </section>
 
             {/* Tech Stack */}
-            <section className="max-w-7xl mx-auto px-4 md:px-8 mb-10 md:mb-16">
+            <section className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 mb-10 md:mb-16">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -151,7 +151,7 @@ export default function CaseStudyClient({ slug }: { slug: string }) {
             </section>
 
             {/* Outcomes */}
-            <section className="max-w-7xl mx-auto px-4 md:px-8 mb-10 md:mb-16">
+            <section className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 mb-10 md:mb-16">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -184,7 +184,7 @@ export default function CaseStudyClient({ slug }: { slug: string }) {
             </section>
 
             {/* CTA */}
-            <section className="max-w-7xl mx-auto px-4 md:px-8 mb-12">
+            <section className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 mb-12">
                 <div className="neo-card bg-ink text-cream p-6 md:p-10 relative overflow-hidden gradient-top-accent">
                     <GridDots className="absolute inset-0 w-full h-full text-cream/3" />
                     <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">

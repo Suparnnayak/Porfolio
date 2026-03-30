@@ -76,7 +76,37 @@ export default function RootLayout({
 
                     {/* Bottom Navigation */}
                     <nav className="fixed bottom-0 left-0 w-full bg-ink border-t-[3px] border-ink z-[100] shadow-[0px_-4px_20px_rgba(0,0,0,0.3)]">
-                        <div className="px-2 md:px-10 py-2.5 md:py-4 flex items-center gap-2 md:gap-4">
+                        <div className="md:hidden px-1 py-2 space-y-2">
+                            <div className="grid grid-cols-5 gap-0.5">
+                                {[
+                                    { href: "/", label: "Home" },
+                                    { href: "/work", label: "Work" },
+                                    { href: "/stack", label: "Stack" },
+                                    { href: "/services", label: "Services" },
+                                    { href: "/resume", label: "Resume" },
+                                ].map((item) => (
+                                    <Link
+                                        key={item.href}
+                                        href={item.href}
+                                        className="text-center font-mono text-[0.62rem] font-bold uppercase tracking-[0.08em] text-cream/85 hover:text-acid transition-colors px-0.5 py-1.5"
+                                    >
+                                        {item.label}
+                                    </Link>
+                                ))}
+                            </div>
+
+                            <div className="flex items-center gap-1.5 pt-2 border-t border-cream/10 px-1">
+                                <ThemeToggle />
+                                <Link
+                                    href="/contact"
+                                    className="flex-1 inline-flex items-center justify-center bg-acid text-ink px-4 py-2.5 font-heading font-bold text-[0.68rem] uppercase tracking-[0.1em] border-[2px] border-ink hover:bg-cream transition-colors whitespace-nowrap"
+                                >
+                                    Let&apos;s Talk
+                                </Link>
+                            </div>
+                        </div>
+
+                        <div className="hidden md:flex px-2 md:px-10 py-2.5 md:py-4 items-center gap-2 md:gap-4">
                             <div className="flex-1 overflow-x-auto hide-scrollbar">
                                 <div className="w-max min-w-full flex items-center justify-start md:justify-center gap-1.5 md:gap-2 whitespace-nowrap pr-2">
                                     <MagneticButton>

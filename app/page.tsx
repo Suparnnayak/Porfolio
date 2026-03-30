@@ -155,20 +155,38 @@ export default function Home() {
                     <div className="absolute -top-20 -right-20 w-72 md:w-[500px] h-72 md:h-[500px] bg-acid/10 rounded-full blur-3xl animate-blob" />
                     <div className="absolute bottom-10 -left-20 w-60 md:w-[400px] h-60 md:h-[400px] bg-electric/10 rounded-full blur-3xl animate-blob" style={{ animationDelay: "2s" }} />
                     <div className="absolute top-1/3 left-1/3 w-48 md:w-[300px] h-48 md:h-[300px] bg-hotpink/8 rounded-full blur-3xl animate-blob" style={{ animationDelay: "4s" }} />
+                    <div className="absolute -top-6 right-8 block sm:hidden w-44 h-44 rounded-full bg-acid/8 blur-[60px] animate-smoke-drift" />
+                    <div className="absolute top-20 right-0 block sm:hidden w-40 h-40 rounded-full bg-cream/10 blur-[52px] animate-smoke-drift-slow" />
+                    <div className="absolute top-28 right-14 block sm:hidden w-28 h-28 rounded-full bg-electric/8 blur-[42px] animate-smoke-drift" style={{ animationDelay: "2s" }} />
                 </div>
 
-                <div className="max-w-[92rem] mx-auto px-4 md:px-8 py-12 md:py-20 w-full relative z-10">
+                <div className="max-w-[92rem] mx-auto px-2 sm:px-4 md:px-8 py-12 md:py-20 w-full relative z-10">
                     <motion.div style={{ y: heroY, opacity: heroOpacity }}>
                         <header className="grid lg:grid-cols-[1.3fr_0.9fr] gap-6 md:gap-8 lg:gap-12 items-start">
                             <motion.div
                                 initial={{ opacity: 0, x: -60 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
+                                className="relative"
                             >
+                                <div className="absolute top-1 right-6 block sm:hidden">
+                                    <div className="neo-card bg-acid p-1.5 overflow-hidden w-28 h-28 rotate-[-2deg] neo-glow animate-hero-float">
+                                        <div className="relative w-full h-full border-[2px] border-ink overflow-hidden">
+                                            <Image
+                                                src="/headshot.png"
+                                                alt="Suparn Nayak headshot"
+                                                fill
+                                                className="object-cover"
+                                                sizes="112px"
+                                                priority
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
                                 <div className="font-mono text-[0.65rem] md:text-sm font-bold uppercase tracking-[0.28em] md:tracking-[0.35em] text-ink/50 mb-4 md:mb-5">
                                     Portfolio / {new Date().getFullYear()}
                                 </div>
-                                <h1 className="text-[3.35rem] sm:text-8xl md:text-[9rem] lg:text-[11rem] xl:text-[12.5rem] font-heading font-bold text-ink leading-[0.84] md:leading-[0.82] tracking-[-0.06em] uppercase max-w-[8ch] md:max-w-[10ch]">
+                                <h1 className="text-[3.35rem] sm:text-8xl md:text-[9rem] lg:text-[11rem] xl:text-[12.5rem] font-heading font-bold text-ink leading-[0.84] md:leading-[0.82] tracking-[-0.06em] uppercase max-w-[8ch] md:max-w-[10ch] animate-mobile-hero-text sm:animate-none">
                                     Suparn
                                     <br />
                                     <span className="relative inline-block">
@@ -206,7 +224,7 @@ export default function Home() {
                                 transition={{ duration: 0.5, delay: 0.3 }}
                                 className="flex flex-col items-center lg:items-end gap-4 md:gap-5 lg:pt-10"
                             >
-                                <div className="neo-card bg-acid p-2 overflow-hidden w-full max-w-[18rem] aspect-square sm:max-w-[20rem] md:max-w-[24rem] lg:max-w-[26rem] xl:max-w-[28rem] rotate-[-2deg] neo-glow">
+                                <div className="hidden sm:block neo-card bg-acid p-2 overflow-hidden w-full max-w-[18rem] aspect-square sm:max-w-[20rem] md:max-w-[24rem] lg:max-w-[26rem] xl:max-w-[28rem] rotate-[-2deg] neo-glow">
                                     <div className="relative w-full h-full border-[3px] border-ink overflow-hidden">
                                         <Image
                                             src="/headshot.png"
@@ -246,7 +264,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="max-w-7xl mx-auto px-4 md:px-8 -mt-4 mb-12 md:mb-20 relative z-20">
+            <section className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 -mt-4 mb-12 md:mb-20 relative z-20">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                     <AnimatedStat value={4} suffix="" label="Core Projects" />
                     <AnimatedStat value={250} suffix="+" label="LeetCode Solved" />
@@ -260,7 +278,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.6 }}
-                className="max-w-7xl mx-auto px-4 md:px-8 mb-12 md:mb-20"
+                className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 mb-12 md:mb-20"
             >
                 <div className="grid md:grid-cols-5 gap-5">
                     <div className="md:col-span-2 neo-card bg-acid p-6 relative overflow-hidden min-h-[300px] md:min-h-[400px] flex flex-col justify-between">
@@ -324,13 +342,13 @@ export default function Home() {
                 </div>
             </motion.section>
 
-            <section className="max-w-7xl mx-auto px-4 md:px-8 mb-12 md:mb-20">
+            <section className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 mb-12 md:mb-20">
                 <div className="theme-section-kicker font-mono text-xs font-bold uppercase tracking-[0.3em] mb-2">Live Feed</div>
                 <h2 className="font-heading font-bold text-2xl md:text-3xl uppercase tracking-tight text-ink mb-4">System Status</h2>
                 <LiveTerminal />
             </section>
 
-            <div className="max-w-7xl mx-auto px-4 md:px-8 mb-12 md:mb-20">
+            <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 mb-12 md:mb-20">
                 <div className="border-[3px] border-ink bg-ink py-4 overflow-hidden">
                     <div className="marquee-container font-mono font-bold text-cream/65 uppercase tracking-[0.3em] text-xs md:text-sm">
                         <div className="marquee-content animate-marquee" style={{ animationDuration: "30s" }}>
@@ -351,7 +369,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <section className="max-w-7xl mx-auto px-4 md:px-8 mb-12 md:mb-20">
+            <section className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 mb-12 md:mb-20">
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -496,7 +514,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.6 }}
-                className="max-w-7xl mx-auto px-4 md:px-8 mb-12 md:mb-20"
+                className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 mb-12 md:mb-20"
             >
                 <div className="neo-card bg-ink text-cream p-6 md:p-12 relative overflow-hidden gradient-top-accent">
                     <CircuitPattern className="absolute top-0 right-0 w-48 md:w-80 h-48 md:h-80 text-cream/5" />
@@ -556,7 +574,7 @@ export default function Home() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-50px" }}
-                className="max-w-7xl mx-auto px-4 md:px-8 mb-12 md:mb-20"
+                className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 mb-12 md:mb-20"
             >
                 <div className="theme-section-kicker font-mono text-xs font-bold uppercase tracking-[0.3em] mb-2">Highlights</div>
                 <h2 className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight text-ink mb-8">Achievements</h2>
@@ -582,7 +600,7 @@ export default function Home() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-50px" }}
-                className="max-w-7xl mx-auto px-4 md:px-8 mb-12 md:mb-20"
+                className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 mb-12 md:mb-20"
             >
                 <div className="theme-section-kicker font-mono text-xs font-bold uppercase tracking-[0.3em] mb-2">Focus Areas</div>
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 mb-6">
@@ -642,7 +660,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="max-w-7xl mx-auto px-4 md:px-8 mb-12"
+                className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 mb-12"
             >
                 <div className="neo-card bg-hotpink text-cream p-6 md:p-12 text-center relative overflow-hidden gradient-top-accent">
                     <GridDots className="absolute inset-0 w-full h-full text-cream/5" />

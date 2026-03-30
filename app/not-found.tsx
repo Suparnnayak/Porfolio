@@ -8,7 +8,7 @@ import { CircuitPattern, GridDots } from "@/components/ui/Decorative";
 export default function NotFound() {
     return (
         <div className="min-h-screen bg-cream flex items-center justify-center pb-28 md:pb-24">
-            <div className="max-w-2xl mx-auto px-4 text-center relative">
+            <div className="max-w-2xl mx-auto px-2 sm:px-4 text-center relative">
                 <CircuitPattern className="absolute top-0 right-0 w-48 h-48 text-ink/5" />
                 <GridDots className="absolute bottom-0 left-0 w-32 h-32 text-ink/5" />
 

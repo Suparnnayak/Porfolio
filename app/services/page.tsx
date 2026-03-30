@@ -45,7 +45,7 @@ export default function ServicesPage() {
         <div className="min-h-screen bg-cream pb-28 md:pb-24">
 
             {/* Status bar */}
-            <div className="w-full bg-ink border-b-[3px] border-ink py-2 px-4 md:px-8 flex justify-between items-center">
+            <div className="w-full bg-ink border-b-[3px] border-ink py-2 px-2 sm:px-4 md:px-8 flex justify-between items-center">
                 <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-acid animate-pulse-dot" />
                     <span className="font-mono text-xs font-bold text-cream/75 uppercase tracking-widest">system://services</span>
@@ -54,7 +54,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Header */}
-            <section className="max-w-7xl mx-auto px-4 md:px-8 mt-8 md:mt-16 mb-8 md:mb-12">
+            <section className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 mt-8 md:mt-16 mb-8 md:mb-12">
                 <motion.div
                     initial={{ opacity: 0, x: -40 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -72,7 +72,7 @@ export default function ServicesPage() {
             </section>
 
             {/* ──── Service Packages ──── */}
-            <section className="max-w-7xl mx-auto px-4 md:px-8 mb-12 md:mb-20">
+            <section className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 mb-12 md:mb-20">
                 <div className="grid md:grid-cols-2 gap-5">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -163,7 +163,7 @@ export default function ServicesPage() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-50px" }}
-                className="max-w-7xl mx-auto px-4 md:px-8 mb-12 md:mb-20"
+                className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 mb-12 md:mb-20"
             >
                 <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-ink/40 mb-2">How I Work</div>
                 <h2 className="font-heading font-bold text-3xl md:text-4xl uppercase tracking-tight text-ink mb-8">The Process</h2>
@@ -193,7 +193,7 @@ export default function ServicesPage() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="max-w-7xl mx-auto px-4 md:px-8 mb-12 md:mb-20"
+                className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 mb-12 md:mb-20"
             >
                 <div className="font-mono text-xs font-bold uppercase tracking-[0.3em] text-ink/40 mb-2">Why This Portfolio</div>
                 <h2 className="font-heading font-bold text-3xl md:text-4xl uppercase tracking-tight text-ink mb-8">How I Add Value</h2>
@@ -244,7 +244,7 @@ export default function ServicesPage() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="max-w-7xl mx-auto px-4 md:px-8 mb-12"
+                className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 mb-12"
             >
                 <div className="neo-card bg-ink text-cream p-8 md:p-12 text-center relative overflow-hidden gradient-top-accent">
                     <GridDots className="absolute inset-0 w-full h-full text-cream/3" />

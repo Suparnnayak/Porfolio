@@ -102,7 +102,7 @@ export default function ContactPage() {
         <div className="min-h-screen bg-cream pb-28 md:pb-24">
 
             {/* Status bar */}
-            <div className="w-full bg-ink border-b-[3px] border-ink py-2 px-4 md:px-8 flex justify-between items-center">
+            <div className="w-full bg-ink border-b-[3px] border-ink py-2 px-2 sm:px-4 md:px-8 flex justify-between items-center">
                 <div className="flex items-center gap-2">
                     <div className="w-2 h-2 bg-acid animate-pulse-dot" />
                     <span className="font-mono text-xs font-bold text-cream/75 uppercase tracking-widest">secure://contact</span>
@@ -110,7 +110,7 @@ export default function ContactPage() {
                 <span className="font-mono text-xs font-bold text-cream/60 tracking-widest uppercase">Encrypted</span>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 md:px-8">
+            <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8">
 
                 {/* Header */}
                 <section className="mt-8 md:mt-16 mb-8 md:mb-12">
