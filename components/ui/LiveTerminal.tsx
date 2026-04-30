@@ -4,10 +4,12 @@ import { useEffect, useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 const commands = [
-    { prompt: "$ matching aidlink --urgent", result: "✓ donors ranked by urgency and distance", delay: 0 },
-    { prompt: "$ forecast healthflow --next-7-days", result: "✓ admissions trend generated", delay: 800 },
-    { prompt: "$ screen idealens --rubric", result: "✓ evidence-grounded scores returned", delay: 1600 },
-    { prompt: "$ track skyrescue --rgb", result: "✓ multi-object tracking stabilized", delay: 2400 },
+    { prompt: "$ sync cotype --users 50+", result: "✓ CRDT operations converged across peers", delay: 0 },
+    { prompt: "$ bench aetherweb --concurrency 10000", result: "✓ thread-pool handled peak request burst", delay: 800 },
+    { prompt: "$ query aegisdb --read-latency", result: "✓ bloom filters reduced disk seeks by 40%", delay: 1600 },
+    { prompt: "$ matching aidlink --urgent", result: "✓ donors ranked by urgency and distance", delay: 2400 },
+    { prompt: "$ forecast healthflow --next-7-days", result: "✓ admissions trend generated", delay: 3200 },
+    { prompt: "$ track skyrescue --rgb", result: "✓ multi-object tracking stabilized", delay: 4000 },
 ];
 
 export default function LiveTerminal() {

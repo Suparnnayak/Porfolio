@@ -3,7 +3,7 @@
 import { BentoGrid, BentoGridItem } from "@/components/ui/BentoGrid";
 import { CircuitPattern, GridDots, CrossHatch } from "@/components/ui/Decorative";
 import LiveTerminal from "@/components/ui/LiveTerminal";
-import { Brain, ArrowUpRight, Github, Mail, ChevronDown, Trophy, Linkedin, Terminal, Code2, Zap, Radar, Database, Star, Instagram, Twitter } from "lucide-react";
+import { Brain, ArrowUpRight, Github, Mail, ChevronDown, Trophy, Linkedin, Terminal, Code2, Zap, Radar, Database, Star, Instagram, Twitter, Server, HardDrive } from "lucide-react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
@@ -65,7 +65,7 @@ const techLogos = [
 const achievements = [
     {
         title: "LeetCode",
-        body: "Solved 250+ DSA problems with a strong focus on problem solving and core data structures.",
+        body: "Solved 350+ DSA problems with a strong focus on problem solving and core data structures.",
         accent: "bg-acid",
     },
     {
@@ -266,8 +266,8 @@ export default function Home() {
 
             <section className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 -mt-4 mb-12 md:mb-20 relative z-20">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                    <AnimatedStat value={4} suffix="" label="Core Projects" />
-                    <AnimatedStat value={250} suffix="+" label="LeetCode Solved" />
+                    <AnimatedStat value={7} suffix="" label="Core Projects" />
+                    <AnimatedStat value={350} suffix="+" label="LeetCode Solved" />
                     <AnimatedStat value={10} suffix="+" label="Projects Built" />
                     <AnimatedStat value={50} suffix="+" label="Students Mentored" />
                 </div>
@@ -388,7 +388,7 @@ export default function Home() {
                 <BentoGrid className="md:auto-rows-[18rem] gap-5">
                     <BentoGridItem
                         index={0}
-                        className="md:col-span-2 md:row-span-2"
+                        className="order-4 md:order-4 md:col-span-1"
                         title="AidLink"
                         description="Disaster relief matcher built with priority queues, spatial hashing, and top-k ranking"
                         bgColor="bg-acid"
@@ -404,7 +404,7 @@ export default function Home() {
 
                     <BentoGridItem
                         index={1}
-                        className="md:col-span-1 md:row-span-2"
+                        className="order-5 md:order-5 md:col-span-1"
                         title="HealthFlow AI"
                         description="7-day hospital admissions forecasting with advisory insights"
                         bgColor="bg-electric"
@@ -435,7 +435,7 @@ export default function Home() {
 
                     <BentoGridItem
                         index={2}
-                        className="md:col-span-1"
+                        className="order-6 md:order-6 md:col-span-1"
                         title="IdeaLens AI"
                         description="RAG-based proposal screening with rubric-grounded evidence"
                         bgColor="bg-hotpink"
@@ -451,7 +451,7 @@ export default function Home() {
 
                     <BentoGridItem
                         index={3}
-                        className="min-h-[17rem] md:col-span-1"
+                        className="order-7 md:order-7 min-h-[17rem] md:col-span-1"
                         title="SkyRescue Vision"
                         description="UAV detection and human tracking"
                         bgColor="bg-vivid"
@@ -480,7 +480,77 @@ export default function Home() {
 
                     <BentoGridItem
                         index={4}
-                        className="min-h-[17rem] md:col-span-1"
+                        className="order-1 md:order-1 min-h-[17rem] md:col-span-2 md:row-span-2"
+                        title="CoType"
+                        description="Distributed collaborative editor with CRDT + WASM core"
+                        bgColor="bg-ink"
+                        textColor="text-cream"
+                        icon={<Code2 size={28} className="text-acid" />}
+                        href="/work/cotype"
+                        header={
+                            <div className="h-full w-full p-3 md:p-4 text-cream pointer-events-none">
+                                <div className="flex justify-between items-start">
+                                    <div className="font-mono text-[0.55rem] md:text-[0.6rem] font-bold text-cream/55 tracking-[0.18em] md:tracking-widest uppercase">
+                                        SYNC://COTYPE
+                                    </div>
+                                    <Code2 size={24} className="text-acid/70 md:w-7 md:h-7" />
+                                </div>
+                                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                    <span className="font-heading font-bold text-[3.3rem] md:text-[5rem] tracking-tighter text-cream/10 leading-none select-none">
+                                        CRDT
+                                    </span>
+                                </div>
+                                <div className="absolute right-4 bottom-20 hidden md:block font-mono text-[0.55rem] font-bold uppercase tracking-[0.25em] text-cream/45">
+                                    Real-time Collaboration
+                                </div>
+                            </div>
+                        }
+                    />
+
+                    <BentoGridItem
+                        index={5}
+                        className="order-2 md:order-2 min-h-[17rem] md:col-span-1"
+                        title="AetherWeb"
+                        description="High-concurrency thread-pool HTTP server"
+                        bgColor="bg-acid"
+                        textColor="text-ink"
+                        icon={<Server size={28} className="text-ink" />}
+                        href="/work/aetherweb"
+                        header={
+                            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <span className="font-heading font-bold text-[3.6rem] md:text-[5.5rem] tracking-tighter text-ink/10 leading-none select-none">
+                                    10K+
+                                </span>
+                            </div>
+                        }
+                    />
+
+                    <BentoGridItem
+                        index={6}
+                        className="order-3 md:order-3 min-h-[17rem] md:col-span-1"
+                        title="AegisDB"
+                        description="Embedded LSM-tree engine with WAL durability"
+                        bgColor="bg-electric"
+                        textColor="text-cream"
+                        icon={<HardDrive size={28} className="text-acid" />}
+                        href="/work/aegisdb"
+                        header={
+                            <div className="h-full w-full p-3 md:p-4 text-cream pointer-events-none">
+                                <div className="font-mono text-[0.55rem] md:text-[0.6rem] font-bold text-cream/55 tracking-[0.18em] md:tracking-widest uppercase">
+                                    DB://AEGIS
+                                </div>
+                                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                    <span className="font-heading font-bold text-[3.4rem] md:text-[5rem] tracking-tighter text-cream/10 leading-none select-none">
+                                        LSM
+                                    </span>
+                                </div>
+                            </div>
+                        }
+                    />
+
+                    <BentoGridItem
+                        index={7}
+                        className="order-8 md:order-8 min-h-[17rem] md:col-span-1"
                         title="The Stack"
                         description="Languages, tools, and deployment flow"
                         bgColor="bg-ink"

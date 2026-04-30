@@ -81,6 +81,16 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
 }
 
 export default function WorkPage() {
+    const priorityOrder = ["cotype", "aetherweb", "aegisdb"];
+    const prioritizedProjects = [...projects].sort((a, b) => {
+        const aIdx = priorityOrder.indexOf(a.slug);
+        const bIdx = priorityOrder.indexOf(b.slug);
+        if (aIdx === -1 && bIdx === -1) return 0;
+        if (aIdx === -1) return 1;
+        if (bIdx === -1) return -1;
+        return aIdx - bIdx;
+    });
+
     return (
         <div className="min-h-screen bg-cream pb-28 md:pb-24">
 
@@ -122,7 +132,7 @@ export default function WorkPage() {
                 className="max-w-7xl mx-auto px-2 sm:px-4 md:px-8 mb-12 md:mb-20"
             >
                 <div className="grid md:grid-cols-2 gap-5">
-                    {projects.map((project, i) => (
+                    {prioritizedProjects.map((project, i) => (
                         <ProjectCard key={project.id} project={project} index={i} />
                     ))}
                 </div>

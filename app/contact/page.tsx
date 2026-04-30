@@ -410,7 +410,7 @@ export default function ContactPage() {
                         >
                             <div className="font-heading font-bold text-lg uppercase tracking-tight mb-2">Quick Snapshot</div>
                             <p className="font-mono text-xs font-bold opacity-70 leading-relaxed">
-                                B.E. Computer Science student, 250+ LeetCode problems solved, 50+ students mentored,
+                                B.E. Computer Science student, 350+ LeetCode problems solved, 50+ students mentored,
                                 and 10+ projects built across AI, systems, and backend-focused development.
                             </p>
                         </motion.div>
